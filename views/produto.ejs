@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= produto.nome %> - Detalhes</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Link para o arquivo de estilo personalizado -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="my-4"><%= produto.nome %></h1>
+
+        <!-- Container para a imagem e as informações do produto lado a lado -->
+        <div class="row">
+            <!-- Coluna para a imagem -->
+            <div class="col-md-6">
+                <img src="<%= produto.image %>" class="img-fluid" alt="<%= produto.nome %>">
+            </div>
+            
+            <!-- Coluna para as informações -->
+            <div class="col-md-6">
+                <h3>Descrição</h3>
+                <p><%= produto.descricao %></p>
+                <!-- Garantir que preco seja um número antes de usar toFixed -->
+                <h4>Preço: R$ <%= (parseFloat(produto.preco) || 0).toFixed(2) %></h4>
+                <a href="/" class="btn btn-secondary mt-4">Voltar para a lista</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
