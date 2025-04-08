@@ -23,3 +23,4 @@ const Produto = connection.define('produto', {
 Produto.sync();  // Cria ou sincroniza a tabela de acordo com o modelo
 
 module.exports = Produto;
+/*

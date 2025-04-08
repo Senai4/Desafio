@@ -6,3 +6,4 @@ const connection = new Sequelize ('produto', 'root', '1234',{
 });
 
 module.exports = connection;
+/*
